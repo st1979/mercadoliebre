@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --amarillo: #EAC926;
+    --azul: #03264C;
+    --celeste: #1259c3;
+    --grisoscuro: #666;
+    --grisclaro: #ebebeb;
+    --verde: #39b54a;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--grisclaro);
+    
+}
+/*---------------header----------------*/
+header {
+    background-color: var(--amarillo);
+
+}
+
+.titulares {
+    font-size: 24px;
+}
+.precios {
+    font-size: 18px;
+}
+.descuentos{
+    font-size: 16px;
+}
+.descripciones {
+    font-size: 16px;
+}
+
+/*----------MAIN---------------*/
+
+main {
+    margin: auto;
+    width: 90vw;
+}
+article {
+    margin-bottom: 10px;
+}
+.infoProducto {
+    border-top: solid 1px #ebebeb;
+    padding: 15px;
+
+/* flexbox para controlar el diseño de los elementos en el artículo */
+    display: flex; 
+    flex-direction: row; /* Los elementos se colocarán en una fila */
+    align-items: center;
+}
+
+.precio {
+    flex: 30%; /* El precio ocupa el 30% del ancho total del artículo */
+  }
+  
+  .descuento {
+    flex: 70%; /* El descuento ocupa el 70% del ancho total del artículo */
+  }
+
+  .infoPrecios{
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+/*--------------Mobile--------------------------------*/
+@media screen and (max-width: 360px) {
+    /* Oculta la descripción en mobile */
+    .descripciones p {
+        display: none;
+    }
+    
+    /*oculta ocultar el site y el login navbar*/
+    .site-navbar, .login-navbar {
+        display: none;
+      }
+        /* Mostrar la imagen del menú hamburguesa */
+  .burger-menu {
+    display: block;
+  }
+}
+/*------------Navegación en tablets-------------*/
+
+@media screen and (min-width: 361px) {
+    /* box-shadow. Para los dispositivos tablet o de resoluciones superiores */
+    article .producto{
+        box-shadow : 0px 0px 10px rgb ( 100 , 100 , 100 );
+    }
+    /* Mostrar el site y el login navbar */
+  .site-navbar, .login-navbar {
+    display: block;
+  }
+  /* Ocultar la imagen del menú hamburguesa */
+  .burger-menu {
+    display: none;
+  }
+  }
+  
+/*----------Navegación en desktop-------------- */
+  @media screen and (min-width: 769px) {
+    /* box-shadow. Para los dispositivos tablet o de resoluciones superiores,*/
+    article .producto{
+        box-shadow : 0px 0px 10px rgb ( 100 , 100 , 100 );
+    }
+  }
+  
