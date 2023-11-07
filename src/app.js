@@ -8,6 +8,9 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'home.html'))
 })
+app.get('/home2', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'home2.html'))
+})
 
 app.listen(port, () => {
   console.log(`Servidor corriendo en http://localhost:${port}`)
